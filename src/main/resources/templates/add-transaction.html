@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Add Transaction</title>
+</head>
+<body>
+<h1>Add Transaction</h1>
+<form action="/transactions/add" method="post">
+  <label for="bookId">Book ID:</label>
+  <input type="text" id="bookId" name="book.id" required><br>
+
+  <label for="userId">User ID:</label>
+  <input type="text" id="userId" name="user.id" required><br>
+
+  <label for="issueDate">Issue Date:</label>
+  <input type="date" id="issueDate" name="issueDate" required><br>
+
+  <label for="returnDate">Return Date:</label>
+  <input type="date" id="returnDate" name="returnDate"><br>
+
+  <button type="submit">Add Transaction</button>
+</form>
+<a href="/transactions">Back to Transaction List</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Transaction List</title>
+</head>
+<body>
+<h1>Transaction List</h1>
+
+<!-- Transaction Table -->
+<table>
+  <thead>
+  <tr>
+    <th>Book</th>
+    <th>User</th>
+    <th>Issue Date</th>
+    <th>Return Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="transaction : ${transactions}">
+    <td th:text="${transaction.book.title}"></td>
+    <td th:text="${transaction.user.name}"></td>
+    <td th:text="${transaction.issueDate}"></td>
+    <td th:text="${transaction.returnDate}"></td>
+  </tr>
+  </tbody>
+</table>
+
+<!-- Add Transaction Button -->
+<a href="/transactions/add">Add Transaction</a>
+</body>
+</html>

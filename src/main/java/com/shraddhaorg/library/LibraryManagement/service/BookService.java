@@ -1,5 +1,6 @@
 package com.shraddhaorg.library.LibraryManagement.service;
   import com.shraddhaorg.library.LibraryManagement.entities.Book;
+  import com.shraddhaorg.library.LibraryManagement.entities.User;
   import com.shraddhaorg.library.LibraryManagement.repository.BookRepository;
   import org.springframework.beans.factory.annotation.Autowired;
   import org.springframework.stereotype.Service;
@@ -27,5 +28,11 @@ public class BookService {
     //delete a book
     public void deleteBook(Long id){
         bookRepository.deleteById(id);
+    }
+    //public void getBookById(Long id){
+        //bookRepository.
+   // }
+    public Book getBookById(Long id) {
+        return bookRepository.findById(id).orElse(null);
     }
 }
